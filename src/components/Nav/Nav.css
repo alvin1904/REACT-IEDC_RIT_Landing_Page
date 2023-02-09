@@ -1,0 +1,55 @@
+nav {
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-auto-flow: column;
+  border-radius: 0 0 5px 5px;
+  position: fixed;
+  z-index: 10;
+  align-items: center;
+  background-color: transparent;
+  animation: entryanimation 0.8s cubic-bezier(0.74, -0.18, 0.54, 1.13);
+  grid-template-columns: 1fr 1.2fr;
+}
+.iedc_logo {
+  height: 60px;
+  width: auto;
+  overflow: hidden;
+  transform: translateX(2rem);
+}
+.idec_nav {
+  display: grid;
+  grid-auto-flow: column;
+  height: 100%;
+  align-items: center;
+  transform: translateX(-2rem);
+}
+.iedc_nav_option {
+  height: 60%;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: 0.5 ease-in-out;
+}
+
+@keyframes entryanimation {
+  0% {
+    opacity: 0.1;
+    transform: translateY(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@media (max-width: 1180px) {
+  .idec_nav {
+    display: grid;
+    grid-auto-flow: row;
+    height: 100%;
+  }
+}

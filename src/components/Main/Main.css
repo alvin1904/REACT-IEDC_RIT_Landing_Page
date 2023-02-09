@@ -1,0 +1,10 @@
+section {
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.landing_main{
+  padding-top: 7rem;
+}
