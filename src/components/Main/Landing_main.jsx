@@ -1,4 +1,9 @@
 const Landing_main = () => {
-  return <>sfgdfg</>;
+  return (
+    <>
+      Landing main
+      <div className="box1"></div>
+    </>
+  );
 };
 export default Landing_main;

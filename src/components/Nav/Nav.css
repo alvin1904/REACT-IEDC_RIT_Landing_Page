@@ -11,6 +11,7 @@ nav {
   background-color: transparent;
   animation: entryanimation 0.8s cubic-bezier(0.74, -0.18, 0.54, 1.13);
   grid-template-columns: 1fr 1.2fr;
+  user-select: none;
 }
 .iedc_logo {
   height: 60px;
@@ -27,13 +28,23 @@ nav {
 }
 .iedc_nav_option {
   height: 60%;
-  width: 100%;
+  width: 150px;
   text-align: center;
   display: grid;
   align-items: center;
   cursor: pointer;
   font-size: 1.25rem;
-  transition: 0.5 ease-in-out;
+  transition: 0.5s ease-in-out;
+  color: white;
+  font-weight: 600;
+}
+.iedc_nav_option:hover,
+.iedc_nav_option:focus {
+  width: 170px;
+  color: rgb(204, 204, 204);
+}
+.hamburger {
+  display: none;
 }
 
 @keyframes entryanimation {
@@ -47,9 +58,46 @@ nav {
   }
 }
 @media (max-width: 1180px) {
+
+  nav {
+    position: relative;
+    background-color: black;
+    border-radius: 0;
+  }
   .idec_nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    align-self: flex-end;
+    text-align: right;
+  }
+  .navMobile {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    transition: 0.4s cubic-bezier(0.15, 1.42, 0.67, 1.07);
+  }
+
+  .navMobile .iedc_logo {
+    display: none;
+  }
+  .navMobile .idec_nav {
+    all: unset;
+    width: 100vw;
+    height: 80vh;
     display: grid;
     grid-auto-flow: row;
-    height: 100%;
+    background-color: white;
+    gap: 0rem;
+  }
+  .navMobile .iedc_nav_option {
+    width: 100%;
+    color: black;
+    font-weight: 400;
+  }
+  .arrow {
+    place-content: center;
   }
 }

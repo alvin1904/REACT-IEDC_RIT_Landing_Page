@@ -1,10 +1,33 @@
-section {
-  color: white;
+main {
+}
+.Landing_main {
+  padding-top: 7rem;
+  background: linear-gradient(black, transparent, black);
+  background-color: black;
+}
+.Intro {
+  background-color: black;
+}
+.Mission {
+  background-color: orange;
+}
+.Vision {
+  background-color: purple;
+}
+.Landing_main,
+.Intro,
+.Mission,
+.Vision {
   width: 100vw;
   height: 100vh;
-  align-items: center;
-  justify-content: center;
 }
-.landing_main{
-  padding-top: 7rem;
+
+@media (max-width: 1180px) {
+  main {
+    background-color: black;
+  }
+  .Landing_main {
+    background-color: black;
+    opacity: 1;
+  }
 }
