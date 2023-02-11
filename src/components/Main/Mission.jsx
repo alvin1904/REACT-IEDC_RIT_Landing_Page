@@ -11,6 +11,8 @@ const Mission = () => {
           Pellentesque vel ex quam. Donec eu tempus erat. Duis vel elit cursus
           diam varius molestie. Vivamus id tempor lacus, a efficitur turpis.
           Quisque convallis ipsum ac dui congue, quis commodo magna convallis.
+          Vivamus id tempor lacus, a efficitur turpis. Quisque convallis ipsum
+          ac dui congue, quis commodo magna convallis.
         </p>
       </div>
       <div className="mission_container">
@@ -23,6 +25,8 @@ const Mission = () => {
           Pellentesque vel ex quam. Donec eu tempus erat. Duis vel elit cursus
           diam varius molestie. Vivamus id tempor lacus, a efficitur turpis.
           Quisque convallis ipsum ac dui congue, quis commodo magna convallis.
+          Vivamus id tempor lacus, a efficitur turpis. Quisque convallis ipsum
+          ac dui congue, quis commodo magna convallis.
         </p>
       </div>
     </div>

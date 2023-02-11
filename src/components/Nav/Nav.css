@@ -40,7 +40,7 @@ nav {
 .iedc_nav_option:hover,
 .iedc_nav_option:focus {
   transform: translateY(-5px);
-  color: rgb(75, 75, 75);
+  color: #01a3bc;
 }
 .hamburger {
   display: none;

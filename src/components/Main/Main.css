@@ -37,14 +37,19 @@
     color: #02bfdc;
     transform: translateY(-1px);
     cursor: pointer;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
   }
 }
 
-.Intro,
-.MissionVision,
-footer {
+.Intro {
   height: 100vh;
+  width: 100vw;
+  background-color: white;
+  position: absolute;
+  z-index: 3;
+}
+footer,
+.MissionVision {
+  height: 250vh;
   width: 100vw;
   background-color: white;
   position: absolute;
@@ -54,12 +59,12 @@ footer {
   top: 117vh;
 }
 .MissionVision {
-  top: 205vh;
+  top: 202vh;
   padding-bottom: 18rem;
 }
 footer {
-  top: 347vh;
-  background-color: red;
+  top: 480vh;
+  background-color: #01a3bc;
   z-index: 4;
 }
 .about_header,
@@ -85,7 +90,7 @@ footer {
 .mission_text {
   text-align: justify;
   box-sizing: border-box;
-  max-width: 80vw;
+  max-width: 70vw;
   padding-top: 0.75rem;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -94,13 +99,48 @@ footer {
 .mission_header {
   height: 100vh;
   width: 100vw;
-  /* background-color: white; */
 }
 .mission_header {
   box-sizing: border-box;
   display: grid;
-  padding-top: 10rem;
-  gap: 10rem;
+  padding-top: 6rem;
+  gap: 22rem;
+}
+.contact_heading {
+  margin-top: 42rem;
+}
+.contact_cards {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 5rem;
+  margin-top: 1.5rem;
+}
+.contact_card {
+  height: 8rem;
+  width: 16rem;
+  display: grid;
+  grid-auto-flow: row;
+  box-sizing: border-box;
+  padding: 1.5rem 1rem;
+  align-items: center;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #01a3bc;
+  color: white;
+  transition: 1s ease;
+}
+.contact_card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: #02bfdc;
+  cursor: pointer;
+}
+.card_name {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.card_number {
+  font-size: 1.25rem;
 }
 @media (max-width: 1180px) {
   .two {
@@ -119,11 +159,14 @@ footer {
     box-sizing: border-box;
     padding-top: 2rem;
   }
+  .mission_header {
+    gap: 0rem;
+  }
   .about_header,
   .mission_container {
-    padding-top: 0rem;
     margin: 0;
     padding: 0;
+    padding-top: 15rem;
     justify-content: space-around;
     transform: translateY(-7rem);
     background-color: white;
@@ -143,5 +186,25 @@ footer {
     font-size: 0.95rem;
     line-height: 1.25rem;
     text-align: justify;
+  }
+  .contact_heading {
+    margin-top: 40rem;
+  }
+  .contact_cards {
+    grid-auto-flow: row;
+    gap: 1rem;
+  }
+  .contact_card {
+    height: 6rem;
+    width: 19rem;
+    padding: 1rem;
+  }
+  .MissionVision {
+    top: 202vh;
+    height: 270vh;
+    padding-bottom: 18rem;
+  }
+  footer {
+    top: 500vh;
   }
 }
