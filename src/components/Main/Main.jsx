@@ -13,11 +13,8 @@ const Main = () => {
       <div className="Intro">
         <Intro />
       </div>
-      <div className="Mission">
+      <div className="MissionVision">
         <Mission />
-      </div>
-      <div className="Vision">
-        <Vision />
       </div>
     </main>
   );

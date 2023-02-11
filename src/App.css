@@ -11,8 +11,10 @@ html,
   user-select: none;
   background-image: linear-gradient(#20221f, #3e3d3f);
 }
+body {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
 .App {
-  overflow: hidden;
 }
 
 ::-webkit-scrollbar {

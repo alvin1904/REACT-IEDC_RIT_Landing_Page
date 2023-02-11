@@ -1,5 +1,5 @@
 import "./Nav.css";
-import Img from "../../assets/logo.png";
+import Img from "../../assets/logoblack.png";
 import { useState } from "react";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 
@@ -15,7 +15,7 @@ const Nav = () => {
   ];
   const [navMobile, setNavMobile] = useState(false);
   return (
-    <nav className={navMobile && `navMobile`}>
+    <nav className={navMobile ? `navMobile` : ``}>
       <img src={`${Img}`} className="iedc_logo" alt="" />
       {!navMobile && (
         <div
