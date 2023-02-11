@@ -2,12 +2,14 @@
   font-family: "Montserrat", sans-serif;
 }
 body,
-html {
+html,
+.root,
+.App {
   color: white;
   scroll-behavior: smooth;
   scroll-snap-type: proximity;
   user-select: none;
-  background-color: black;
+  background-image: linear-gradient(#20221f, #3e3d3f);
 }
 .App {
   overflow: hidden;

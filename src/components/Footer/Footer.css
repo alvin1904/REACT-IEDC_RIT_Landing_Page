@@ -3,3 +3,9 @@ footer {
   height: 300px;
   background-color: greenyellow;
 }
+
+@media (max-width: 1180px) {
+  footer {
+    height: 400px;
+  }
+}

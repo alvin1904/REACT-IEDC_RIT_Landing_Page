@@ -9,7 +9,6 @@ nav {
   z-index: 10;
   align-items: center;
   background-color: transparent;
-  animation: entryanimation 0.8s cubic-bezier(0.74, -0.18, 0.54, 1.13);
   grid-template-columns: 1fr 1.2fr;
   user-select: none;
 }
@@ -28,15 +27,15 @@ nav {
 }
 .iedc_nav_option {
   height: 60%;
-  width: 150px;
+  width: 110px;
   text-align: center;
   display: grid;
   align-items: center;
   cursor: pointer;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   transition: 0.5s ease-in-out;
   color: white;
-  font-weight: 600;
+  font-weight: 400;
 }
 .iedc_nav_option:hover,
 .iedc_nav_option:focus {
@@ -47,25 +46,18 @@ nav {
   display: none;
 }
 
-@keyframes entryanimation {
-  0% {
-    opacity: 0.1;
-    transform: translateY(-60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-@media (max-width: 1180px) {
 
+@media (max-width: 1180px) {
   nav {
     position: relative;
-    background-color: black;
+    background-image: linear-gradient(90deg, #20221f,#20221f, #20221f,#3e3d3f);
     border-radius: 0;
+    justify-items: center;
+    overflow: hidden;
   }
   .idec_nav {
     display: none;
+    
   }
   .hamburger {
     display: block;
@@ -74,6 +66,7 @@ nav {
   }
   .navMobile {
     background-color: white;
+    position: absolute;
     height: 100vh;
     width: 100vw;
     justify-content: center;
@@ -86,14 +79,15 @@ nav {
   .navMobile .idec_nav {
     all: unset;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     display: grid;
     grid-auto-flow: row;
     background-color: white;
-    gap: 0rem;
+    padding-top: 1.2rem;
   }
   .navMobile .iedc_nav_option {
     width: 100%;
+    height: 0%;
     color: black;
     font-weight: 400;
   }

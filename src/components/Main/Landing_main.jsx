@@ -1,8 +1,9 @@
 const Landing_main = () => {
   return (
     <>
-      Landing main
-      <div className="box1"></div>
+      <div className="header">
+        INNOVATION AND ENTREPRENEURSHIP DEVELOPMENT CENTRE
+      </div>
     </>
   );
 };

@@ -2,17 +2,12 @@ main {
 }
 .Landing_main {
   padding-top: 7rem;
-  background: linear-gradient(black, transparent, black);
-  background-color: black;
 }
-.Intro {
-  background-color: black;
-}
-.Mission {
-  background-color: orange;
-}
-.Vision {
-  background-color: purple;
+.Vision,
+.Mission,
+.Intro,
+.Landing_main {
+  background-image: linear-gradient(90deg, #20221f, #20221f, #20221f, #3e3d3f);
 }
 .Landing_main,
 .Intro,
@@ -22,12 +17,30 @@ main {
   height: 100vh;
 }
 
+.header {
+  margin-top: 7.25rem;
+  font-size: 9.37rem;
+  line-height: 120px;
+  font-weight: 800;
+  word-wrap: break-word;
+  background: url("../../assets/i1.jpg");
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: center;
+
+}
 @media (max-width: 1180px) {
+  .header {
+    font-size: 3.92rem;
+    margin-top: 6.25rem;
+    line-height: 50px;
+    background-position: unset;
+    -webkit-text-stroke: 0.10px white;
+  }
   main {
-    background-color: black;
   }
   .Landing_main {
-    background-color: black;
     opacity: 1;
   }
 }
