@@ -1,5 +1,5 @@
 .header {
-  height: 100vh;
+  height: 119vh;
   width: 100vw;
   background-color: white;
   padding-top: 7rem;
@@ -9,7 +9,7 @@
   position: absolute;
 }
 .header_shader {
-  height: 100vh;
+  height: 115vh;
   width: 100vw;
   top: 7.2rem;
   position: absolute;
@@ -21,7 +21,7 @@
   background: linear-gradient(to top, white, transparent);
 }
 .heading {
-  position: fixed;
+  position:fixed;
   top: 12rem;
   color: #01a3bc;
   font-size: 5.5rem;
@@ -37,6 +37,7 @@
     color: #02bfdc;
     transform: translateY(-1px);
     cursor: pointer;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -46,21 +47,23 @@
   width: 100vw;
   background-color: white;
   position: absolute;
+  z-index: 3;
 }
 .Intro {
-  top: 115vh;
+  top: 117vh;
   background-color: white;
 }
 .MissionVision {
-  top: 215vh;
+  top: 217vh;
 }
 footer {
-  top: 315vh;
+  top: 317vh;
   background-color: red;
+  z-index: 4;
 }
 .about_header {
   box-sizing: border-box;
-  padding-top: 12rem;
+  padding-top: 7rem;
   color: black;
   display: grid;
   justify-content: center;
@@ -68,11 +71,20 @@ footer {
 }
 .about_heading {
   text-align: center;
+  border-bottom: 2px solid #01a3bc;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #01a3bc;
 }
 .about_text {
   text-align: justify;
   box-sizing: border-box;
-  max-width: 60vw;
+  max-width: 80vw;
+  padding-top: 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: center;
 }
 
 @media (max-width: 1180px) {
@@ -87,18 +99,30 @@ footer {
     hyphens: auto;
     -webkit-text-stroke: 0.5px white;
   }
+  .Intro{
+    display: grid;
+    box-sizing: border-box;
+    padding-top: 2rem;
+  }
   .about_header {
-    padding-top: 6rem;
+    padding-top: 0rem;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    transform: translateY(-7rem);
   }
   .about_heading {
+    border-bottom: 2px solid #01a3bc;
+    padding-bottom: 1rem;
     margin-bottom: 1rem;
     font-size: 2rem;
     color: #01a3bc;
   }
   .about_text {
     max-width: 90vw;
-    border-top: 2px solid #01a3bc;
     padding-top: 0.75rem;
-    font-size: 1.15rem;
+    font-size: 0.95rem;
+    line-height: 1.25rem;
+    text-align: justify;
   }
 }
