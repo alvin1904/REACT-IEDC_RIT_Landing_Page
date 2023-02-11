@@ -21,7 +21,7 @@
   background: linear-gradient(to top, white, transparent);
 }
 .heading {
-  position:fixed;
+  position: fixed;
   top: 12rem;
   color: #01a3bc;
   font-size: 5.5rem;
@@ -42,7 +42,8 @@
 }
 
 .Intro,
-.MissionVision {
+.MissionVision,
+footer {
   height: 100vh;
   width: 100vw;
   background-color: white;
@@ -51,17 +52,18 @@
 }
 .Intro {
   top: 117vh;
-  background-color: white;
 }
 .MissionVision {
-  top: 217vh;
+  top: 205vh;
+  padding-bottom: 18rem;
 }
 footer {
-  top: 317vh;
+  top: 347vh;
   background-color: red;
   z-index: 4;
 }
-.about_header {
+.about_header,
+.mission_container {
   box-sizing: border-box;
   padding-top: 7rem;
   color: black;
@@ -69,15 +71,18 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.about_heading {
+.about_heading,
+.mission_heading {
   text-align: center;
   border-bottom: 2px solid #01a3bc;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   font-size: 2rem;
+  font-weight: 400;
   color: #01a3bc;
 }
-.about_text {
+.about_text,
+.mission_text {
   text-align: justify;
   box-sizing: border-box;
   max-width: 80vw;
@@ -86,7 +91,17 @@ footer {
   line-height: 1.5rem;
   text-align: center;
 }
-
+.mission_header {
+  height: 100vh;
+  width: 100vw;
+  /* background-color: white; */
+}
+.mission_header {
+  box-sizing: border-box;
+  display: grid;
+  padding-top: 10rem;
+  gap: 10rem;
+}
 @media (max-width: 1180px) {
   .two {
     height: 102.2vh;
@@ -99,26 +114,30 @@ footer {
     hyphens: auto;
     -webkit-text-stroke: 0.5px white;
   }
-  .Intro{
+  .Intro {
     display: grid;
     box-sizing: border-box;
     padding-top: 2rem;
   }
-  .about_header {
+  .about_header,
+  .mission_container {
     padding-top: 0rem;
     margin: 0;
     padding: 0;
     justify-content: space-around;
     transform: translateY(-7rem);
+    background-color: white;
   }
-  .about_heading {
+  .about_heading,
+  .mission_heading {
     border-bottom: 2px solid #01a3bc;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
     font-size: 2rem;
     color: #01a3bc;
   }
-  .about_text {
+  .about_text,
+  .mission_text {
     max-width: 90vw;
     padding-top: 0.75rem;
     font-size: 0.95rem;
