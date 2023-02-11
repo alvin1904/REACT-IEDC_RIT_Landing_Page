@@ -28,7 +28,41 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-position: center;
-
+  overflow: hidden;
+}
+.main_main {
+  overflow: hidden;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 30.5%;
+  left: 0;
+  width: 200px;
+  height: 62%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: skewX(45deg) translateX(-15rem);
+  transition: 0.5s;
+  overflow: hidden;
+  animation: glassshiny 3s ease 0s normal infinite;
+}
+/* .header:hover::before {
+  transform: skewX(45deg) translateX(85rem);
+} */
+@keyframes glassshiny {
+  0% {
+    opacity: 1;
+    transform: skewX(45deg) translateX(-15rem);
+  }
+  20% {
+    transform: skewX(45deg) translateX(85rem);
+  }
+  21% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @media (max-width: 1180px) {
   .header {
@@ -36,7 +70,7 @@ main {
     margin-top: 6.25rem;
     line-height: 50px;
     background-position: unset;
-    -webkit-text-stroke: 0.10px white;
+    -webkit-text-stroke: 0.1px white;
   }
   main {
   }
