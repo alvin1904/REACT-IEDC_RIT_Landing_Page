@@ -1,8 +1,37 @@
+import { useState, useRef, useMemo, useEffect } from "react";
+
 const Intro = () => {
+  const targetRef = useRef(null);
+  const [aboutVisible, setAboutVisible] = useState(false);
+
+  const callbackFunction = (entries) => {
+    const [entry] = entries;
+    setAboutVisible(entry.isIntersecting);
+  };
+  const options = useMemo(() => {
+    return { root: null, rootMargin: "0px", threshold: 0.3 };
+  }, []);
+  useEffect(() => {
+    const observer = new IntersectionObserver(callbackFunction, options);
+    const currentTarget = targetRef.current;
+    if (currentTarget) observer.observe(currentTarget);
+
+    //CLEANUP FUNCTION
+    return () => {
+      if (currentTarget) observer.unobserve(currentTarget);
+    };
+  }, [targetRef, options]);
+
   return (
     <div className="about_header">
-      <div className="about_text">
-        <div className="about_heading">About IEDC RIT</div>
+      <div
+        className={`about_text ${
+          aboutVisible ? "inViewport" : "notInViewport"
+        }`}
+      >
+        <div className="about_heading" ref={targetRef}>
+          About IEDC RIT
+        </div>
         Innovation and entrepreneurship cell RIT is a vibrant student-run
         organisation aiming to empower student minds and guide them throughout
         the path of innovation. IEDC RIT promote the culture of creative
