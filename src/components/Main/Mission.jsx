@@ -3,15 +3,15 @@ import Vision from "./Vision";
 
 const Mission = () => {
   const targetRef = useRef(null);
-  const [headingVisible, setHeadingVisible] = useState(false);
+  const [missionVisible, setMissionVisible] = useState(false);
 
   const options = useMemo(() => {
-    return { root: null, rootMargin: "0px", threshold: 0.3 };
+    return { root: null, rootMargin: "0px", threshold: 0.8 };
   }, []);
 
   const callbackFunction = (entries) => {
     const [entry] = entries;
-    setHeadingVisible(entry.isIntersecting);
+    setMissionVisible(entry.isIntersecting);
   };
   useEffect(() => {
     const observer = new IntersectionObserver(callbackFunction, options);
@@ -25,26 +25,24 @@ const Mission = () => {
 
   return (
     <div className="mission_header">
-      <div
-        className={`mission_container ${
-          headingVisible ? "headingAnimation" : ""
-        }`}
-      >
-        <h1 className="mission_heading" ref={targetRef}>
-          Mission
-        </h1>
-        <p className="mission_text mission_intersection">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-          pellentesque venenatis risus, ut placerat odio finibus consectetur.
-          Suspendisse faucibus molestie dolor vel lobortis. Nulla facilisi. Sed
-          felis lorem, rhoncus a convallis quis, accumsan sit amet justo.
-          Pellentesque vel ex quam. Donec eu tempus erat. Duis vel elit cursus
-          diam varius molestie. Vivamus id tempor lacus, a efficitur turpis.
-          Quisque convallis ipsum ac dui congue, quis commodo magna convallis.
-          Vivamus id tempor lacus, a efficitur turpis. Quisque convallis ipsum
-          ac dui congue, quis commodo magna convallis.
-        </p>
-      </div>
+    <div
+      className={`mission_container ${
+        missionVisible ? "inViewport" : "notInViewport"
+      }`}
+    >
+      <h1 className="mission_heading" ref={targetRef}>Mission</h1>
+      <p className="mission_text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+        pellentesque venenatis risus, ut placerat odio finibus consectetur.
+        Suspendisse faucibus molestie dolor vel lobortis. Nulla facilisi. Sed
+        felis lorem, rhoncus a convallis quis, accumsan sit amet justo.
+        Pellentesque vel ex quam. Donec eu tempus erat. Duis vel elit cursus
+        diam varius molestie. Vivamus id tempor lacus, a efficitur turpis.
+        Quisque convallis ipsum ac dui congue, quis commodo magna convallis.
+        Vivamus id tempor lacus, a efficitur turpis. Quisque convallis ipsum ac
+        dui congue, quis commodo magna convallis.
+      </p>
+    </div>
       <Vision />
     </div>
   );

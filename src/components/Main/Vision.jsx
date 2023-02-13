@@ -24,12 +24,12 @@ const Vision = () => {
 
   return (
     <div
-      className={`mission_container ${
+      className={`mission_container vision_container ${
         visionVisible ? "inViewport" : "notInViewport"
       }`}
     >
       <h1 className="mission_heading" ref={targetRef2}>Vision</h1>
-      <p className="mission_text vision_intersection">
+      <p className="mission_text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
         pellentesque venenatis risus, ut placerat odio finibus consectetur.
         Suspendisse faucibus molestie dolor vel lobortis. Nulla facilisi. Sed

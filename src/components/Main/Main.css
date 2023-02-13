@@ -38,6 +38,9 @@
     transform: translateY(-1px);
     cursor: pointer;
   }
+  .vision_container {
+    margin-top: 5rem;
+  }
 }
 
 .Intro {
@@ -209,14 +212,15 @@ footer {
   }
 }
 
+
 /* INTERSECTION OBSERVER */
 .notInViewport {
   opacity: 0;
-  animation: fadeOut 2s none 0s;
+  animation: fadeOut 1.75s none 0s;
 }
 .inViewport {
   opacity: 1;
-  animation: fadeIn 2s none 0s;
+  animation: fadeIn 1.75s none 0s;
 }
 .headingAnimation {
   opacity: 1;
@@ -236,7 +240,6 @@ footer {
   }
   100% {
     opacity: 0;
-    transform: translateY(-10px);
   }
 }
 @keyframes entryAnimation {
