@@ -34,3 +34,8 @@ body {
 body {
   overflow-x: hidden;
 }
+
+.footer_social_links{
+  all: unset;
+  cursor: pointer;
+}

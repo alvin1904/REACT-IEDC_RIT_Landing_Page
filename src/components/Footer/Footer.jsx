@@ -31,10 +31,10 @@ const Footer = () => {
           <div className="footer_2_down">
             <div className="footer_heading">SOCIAL MEDIA</div>
             <div className="footer_icons">
-              <BsFacebook size={30}/>
-              <AiFillInstagram size={35} />
-              <BsLinkedin size={30}/>
-              <BsYoutube size={30}/>
+              <a href="https://www.instagram.com/iedc.rit/" target="_blank" className="footer_social_links"><AiFillInstagram size={35}/></a>
+              <a href="https://www.facebook.com/svbcrit" target="_blank" className="footer_social_links"><BsFacebook size={30}/></a>
+              <a href="https://www.linkedin.com/company/iedcrit/" target="_blank" className="footer_social_links"><BsLinkedin size={30}/></a>
+              <a href="https://www.youtube.com/channel/UCV7DzcPJBhgJbU8nT4KS0Jg/featured" target="_blank" className="footer_social_links"><BsYoutube size={30}/></a>
             </div>
           </div>
         </div>
